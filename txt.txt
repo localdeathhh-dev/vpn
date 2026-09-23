@@ -1,4 +1,4 @@
 #profile-title: tg: ooairvpn
-#announce: Бесплатный VPN от @ooairvpn | Эксклюзив для 32-го города, Вита. | Сделано @ooair
+#announce: Бесплатный VPN от @ooairvpn | Эксклюзив для 32-го города, Вита. | Сделано @ooair | С пробемами обращайтесь в сообщения каналу. | 🏴 Для Wi-fi | 🏳️ Для мобильного интернета (белые списки)
 vless://c5694dc5-39fd-4a92-8430-3837baa522a3@185.229.9.175:443?flow=xtls-rprx-vision&type=raw&security=reality&fp=firefox&sni=api.ok.ru&pbk=Eutx4frdhG1y7THj7k3CjazAsrCMj932RtbV4a1QfQk&sid=d5b6308860d578bb&spx=%2F#%F0%9F%87%AA%F0%9F%87%BA+%F0%9F%8F%B3%EF%B8%8F+%E2%80%A2+%D0%90%D0%B2%D1%82%D0%BE+%D0%95%D0%B2%D1%80%D0%BE%D0%BF%D0%B0
 vless://f495298f-2bdb-4fd8-9ac9-5dd33d1b482a@5.157.10.250:443?flow=xtls-rprx-vision&type=tcp&headerType=none&security=reality&fp=chrome&sni=swebz.loozerp.wiki&pbk=pgG2grngQEtOFJImLfz0AEm-O2IodM2jCY4aMCYQI1U&sid=6aa2d2e950441a9a&host=/?TELEGRAM--MARAMBASHI--MARAMBASHI#%F0%9F%87%B8%F0%9F%87%AA+%F0%9F%8F%B4+%E2%80%A2+%D0%90%D0%B2%D1%82%D0%BE+%D0%A8%D0%B2%D0%B5%D1%86%D0%B8%D1%8F
