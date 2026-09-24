@@ -3,8 +3,6 @@
 #subscription-userinfo: expire=151400523600
 #support-url: https://t.me/ooairvpn
 
-vless://c5694dc5-39fd-4a92-8430-3837baa522a3@91.240.86.12:443?flow=xtls-rprx-vision&type=raw&security=reality&fp=chrome&sni=yandex.ru&pbk=2ZUQYIhUijdJ1vRL8iR8RxjmJvRVHYp-JoWevQ2LyR4&sid=7bb730e3e6616d31#%F0%9F%87%AA%F0%9F%87%BA+%F0%9F%8C%8D+%E2%80%A2+%D0%A3%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9+%E2%80%A2+1
-
 vless://c5694dc5-39fd-4a92-8430-3837baa522a3@185.229.9.175:443?flow=xtls-rprx-vision&type=raw&security=reality&fp=firefox&sni=api.ok.ru&pbk=Eutx4frdhG1y7THj7k3CjazAsrCMj932RtbV4a1QfQk&sid=d5b6308860d578bb&spx=%2F#%F0%9F%87%AA%F0%9F%87%BA+%F0%9F%8C%8D+%E2%80%A2+%D0%A3%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9
 
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo2TnRwM1FhdW5LYjhHVVVlNk1FTWFROTNXTkIyNXdhVw==@max.ru:1234#%E2%9B%94%EF%B8%8F%20%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B
