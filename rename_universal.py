@@ -15,8 +15,8 @@ import re
 import urllib.request
 import urllib.parse
 
-HEADER = """#profile-title: КуклаVPN
-#announce: Вся информация по кнопке «Поддержка»
+HEADER = """#profile-title: КуклаVPN • @kyklavpn • @ooair
+#announce: Вся информация по кнопке «Поддержка», эксклюзив для 32 города, Вита.
 #subscription-userinfo: expire=151400523600
 #support-url: https://t.me/kyklavpn
 """
