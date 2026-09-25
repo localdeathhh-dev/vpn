@@ -22,7 +22,7 @@ jobs:
 
       - name: Run script
         run: |
-          python rename_universal.py https://sub.vlessfo.ru/vlessforu/working_configs.txt txt.txt
+          python rename_universal.py https://sub.vlessfo.ru/vlessforu/working_configs.txt result.txt
 
       - name: Commit and push result
         run: |
