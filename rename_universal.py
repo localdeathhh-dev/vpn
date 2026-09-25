@@ -1,18 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Универсальный скрипт для обработки подписки с vless/reality конфигами.
+Скрипт отбирает из подписки только vless+reality конфиги,
+у которых имя начинается на LTE или 5G (любой оператор),
+переименовывает их в "🇪🇺 🌍 • Универсальный • N" и сохраняет
+в новый файл с нужной шапкой. Всё остальное отбрасывается.
 
 Использование:
     python rename_universal.py <источник> <файл_результата>
-
-<источник> может быть:
-    - путь к локальному файлу (например txt.txt)
-    - URL (например https://sub.vlessfo.ru/vlessforu/working_configs.txt)
-
-Пример:
-    python rename_universal.py txt.txt result.txt
-    python rename_universal.py https://sub.vlessfo.ru/vlessforu/working_configs.txt result.txt
 """
 
 import sys
@@ -26,18 +21,27 @@ HEADER = """#profile-title: КуклаVPN
 #support-url: https://t.me/kyklavpn
 """
 
-# Регулярка для поиска "LTE" или "5G" в начале имени (после отсечения эмодзи/спецсимволов)
+# Имя должно начинаться (после эмодзи/спецсимволов) на LTE или 5G
 NAME_PATTERN = re.compile(r'^[^A-Za-z0-9]*(LTE|5G)', re.IGNORECASE)
 
 
 def load_source(source: str) -> str:
-    """Загружает содержимое из URL или локального файла."""
     if source.startswith("http://") or source.startswith("https://"):
         with urllib.request.urlopen(source) as resp:
             return resp.read().decode("utf-8", errors="ignore")
     else:
         with open(source, "r", encoding="utf-8", errors="ignore") as f:
             return f.read()
+
+
+def is_reality_vless(link: str) -> bool:
+    """Проверяет, что ссылка это vless:// и содержит security=reality"""
+    if not link.startswith("vless://"):
+        return False
+    parsed = urllib.parse.urlparse(link)
+    query = urllib.parse.parse_qs(parsed.query)
+    security = query.get("security", [""])[0].lower()
+    return security == "reality"
 
 
 def process(text: str) -> str:
@@ -47,31 +51,33 @@ def process(text: str) -> str:
 
     for line in lines:
         stripped = line.strip()
-
-        # пропускаем пустые строки и старые строки шапки (начинаются с #profile-title и т.п.)
         if not stripped:
             continue
-        if stripped.startswith("#profile-title") or \
-           stripped.startswith("#announce") or \
-           stripped.startswith("#subscription-userinfo") or \
-           stripped.startswith("#support-url"):
+
+        # пропускаем строки шапки исходного файла
+        if stripped.startswith("#"):
             continue
 
-        # Проверяем, есть ли в строке протокол-ссылка с фрагментом (#имя) в конце
-        if "#" in stripped and "://" in stripped:
-            base, _, fragment = stripped.rpartition("#")
-            decoded_name = urllib.parse.unquote(fragment)
+        if "#" not in stripped or "://" not in stripped:
+            continue
 
-            if NAME_PATTERN.match(decoded_name):
-                new_name = f"🌍 • Универсальный • {counter}"
-                counter += 1
-                new_fragment = urllib.parse.quote(new_name)
-                new_line = f"{base}#{new_fragment}"
-                result_lines.append(new_line)
-                continue
+        base, _, fragment = stripped.rpartition("#")
 
-        # если не подошло под условие — оставляем строку как есть
-        result_lines.append(stripped)
+        # проверка: это vless + reality?
+        if not is_reality_vless(base):
+            continue
+
+        decoded_name = urllib.parse.unquote(fragment)
+
+        # проверка: имя начинается на LTE или 5G?
+        if not NAME_PATTERN.match(decoded_name):
+            continue
+
+        new_name = f"🇪🇺 🌍 • Универсальный • {counter}"
+        counter += 1
+        new_fragment = urllib.parse.quote(new_name)
+        new_line = f"{base}#{new_fragment}"
+        result_lines.append(new_line)
 
     body = "\n".join(result_lines)
     return HEADER + "\n" + body + "\n"
