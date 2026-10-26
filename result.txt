@@ -3,4 +3,5 @@
 #subscription-userinfo: expire=151400523600
 #support-url: https://t.me/kyklavpn
 
-vless://d1f0c6cb-0d8b-4f13-8104-b7c8e8c57110@188.225.77.254:8443/?type=grpc&encryption=none&flow=&serviceName=ozone&sni=io.ozone.ru&fp=firefox&security=reality&pbk=rJ-fFNYXh7WW9LuYe1N71fh7nAEe5i09Pi5ZDSDlH1s&sid=4951a2313524dd8f#%F0%9F%87%AA%F0%9F%87%BA%20%F0%9F%8C%8D%20%E2%80%A2%20%D0%A3%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%E2%80%A2%201
+vless://1d19ad61-2107-41e3-a850-7c74b2fabda0@node-200-09.whitenetwork.cloud:7448?flow=xtls-rprx-vision&encryption=none&security=reality&sni=node-200-09.whitenetwork.cloud&fp=qq&pbk=FTpxb0Xj2DqueaTxpHFS-SvNrxQxg9zeS9LG3WWiLA0&sid=acbceb502c63dcde&type=tcp&headerType=none#%F0%9F%87%AA%F0%9F%87%BA%20%F0%9F%8C%8D%20%E2%80%A2%20%D0%A3%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%E2%80%A2%201
+vless://3a4f6204-472c-4c69-b7be-cca84de97148@87.242.95.164:8445?flow=xtls-rprx-vision&security=reality&sni=passport.yandex.ru&fp=firefox&pbk=l06r0clkHjHk7HRGpkDBJwZ1JJscSqfwHUQOrV3v3hQ#%F0%9F%87%AA%F0%9F%87%BA%20%F0%9F%8C%8D%20%E2%80%A2%20%D0%A3%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%E2%80%A2%202
